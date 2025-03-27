@@ -13,24 +13,21 @@
         background-color: #fff;
         border: 1px solid #E5E7EB;
         border-radius: 12px;
+        margin-bottom: 16px; /* Add margin between cards */
       }
+
       .card:hover {
         transform: translateY(-5px);
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        background-color: #FFFBF2; 
-      }
-
-      .card i {
-        color: #000000; 
-        cursor: pointer;
+        background-color: #FFFBF2;
       }
 
       /* Styling for the images */
       .card img {
-        object-fit: cover; /* Ensures the image covers the container without distortion */
-        width: 56px; /* Set to a fixed width */
-        height: 56px; /* Set to a fixed height */
-        border-radius: 50%; /* Keeps the image circular */
+        object-fit: cover;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
       }
 
       .logo {
@@ -40,6 +37,7 @@
         border-radius: 50%;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 4px solid #E5E7EB; /* Border around the logo */
       }
 
       .logo:hover {
@@ -48,95 +46,92 @@
       }
 
       body {
-        background: linear-gradient(135deg, #ffeb0a69, #ffeb0a61); 
+        background: linear-gradient(135deg, #ffffff69, #bbbbbb61);
         color: #33333330;
+        padding: 0 10px; /* Add padding on the sides for mobile */
       }
 
       .text-primary {
-        color: #333; 
+        color: #333;
       }
 
       .text-secondary {
-        color: #6B7280; /* Lighter gray for secondary text */
+        color: #6B7280;
       }
 
-      /* Hover effect for submenu */
-      .submenu {
-        display: none;
-        position: absolute;
-        background-color: #FFB800; /* Bright yellow background */
-        color: #fff; /* White text */
-        border-radius: 8px;
-        padding: 8px 16px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        margin-top: 5px;
-      }
-
-      .submenu a {
-        color: #333; /* Dark gray for submenu links */
-        text-decoration: none;
-        padding: 8px 0;
-        display: block;
-      }
-
-      .submenu a:hover {
-        background-color: #F57C00; /* Darker yellow on hover */
-      }
-
-      /* Display submenu on hover */
-      .menu-item:hover .submenu {
-        display: block;
-      }
-
-      /* Card text styling */
-      .card-text {
-        color: #4B5563;
-      }
-
-      .card-text:hover {
-        color: #FFB800; /* Change text to yellow on hover */
-      }
-
-      /* Media query for mobile adjustments */
+      /* Responsive adjustments for smaller screens */
       @media (max-width: 640px) {
-        body {
-          background-color: #000000; /* Darker background on mobile */
+        .container {
+          padding: 12px; /* Add padding for better spacing */
+        }
+
+        .card {
+          padding: 12px;
+          margin-bottom: 12px; /* Reduced margin to avoid overcrowding */
+        }
+
+        .card img {
+          width: 48px;
+          height: 48px; /* Resize the images for mobile */
+        }
+
+        .text-primary {
+          font-size: 18px; /* Adjust font size for smaller screens */
+        }
+
+        .text-secondary {
+          font-size: 14px; /* Adjust font size for secondary text */
+        }
+
+        .social-icon {
+          font-size: 1.5rem; /* Adjust social icon size for mobile */
+        }
+
+        .space-x-4 {
+          gap: 12px; /* Add more space between social icons */
+        }
+
+        .mt-4 {
+          margin-top: 16px;
+        }
+
+        h1 {
+          font-size: 24px; /* Adjust the heading size for mobile */
+        }
+
+        /* Adjust the layout of the cards to stack vertically */
+        .space-y-4 {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
         }
       }
 
-      /* Styling for the main heading */
-      h1 {
-        color: #FFB800; /* Yellow primary text */
+      /* Adding border around the entire content */
+      .main-wrapper {
+        border: 2px solid #E5E7EB; /* Border around the entire page */
+        border-radius: 12px;
+        background-color: #FFFFFF;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        padding: 20px; /* Add padding inside the border */
       }
 
-      /* Custom background for container */
-      .container {
-        background-color: hsl(0, 0%, 100%); /* White background for the container */
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+      /* Adding border around the menu and cards */
+      .menu-wrapper {
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #FFFFFF;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       }
-
-      /* 3D effect for icons on click */
-      .social-icon {
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
-
-      .social-icon:active {
-        transform: scale(1.3); /* Scale the icon to 1.3 times its size */
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Add more prominent shadow */
-      }
-
-      /* Optional: Add hover effect for the icons for extra emphasis */
-      .social-icon:hover {
-        transform: scale(1.1); /* Make the icon grow a little on hover */
-      }
-
     </style>
   </head>
   <body>
-    <div class="max-w-lg mx-auto p-6 rounded-lg mt-10 container">
+    <div class="max-w-lg mx-auto mt-10 container main-wrapper">
       <div class="text-center mb-6">
-        <!-- Enhanced logo -->
-        <img alt="WAGYUSHOOT.ID" class="logo mx-auto mb-4" src="logo1.jpeg"/>
+        <!-- Enhanced logo with border -->
+        <div class="logo-wrapper border-2 border-gray-200 p-4 rounded-full inline-block mb-4">
+          <img alt="WAGYUSHOOT.ID" class="logo mx-auto" src="logo1.jpeg"/>
+        </div>
 
         <h1 class="text-3xl font-bold text-primary">WAGYUSHOOT.ID</h1>
         <p class="text-secondary mt-2">
@@ -153,63 +148,65 @@
           </a>
         </div>
       </div>
-      
-      <div class="space-y-4">
-        <!-- Card 1 -->
-        <a href="https://drive.google.com/drive/folders/10-CirvmdPyVFK_k9bFPLmKe1gyjkEwqO" target="_blank">
-          <div class="card p-4 rounded-lg flex items-center justify-between shadow-md hover:shadow-xl">
-            <div class="flex items-center">
-              <img alt="Motorcycle on the road" class="w-14 h-14 rounded-full mr-4" src="logo16nyored.jpg"/>
-              <span class="text-lg font-semibold text-primary">Nyored 16 Maret | JB Sampora Kuningan </span>
-            </div>
-            <i class="fas fa-ellipsis-h text-gray-500"></i>
-          </div>
-        </a>        
 
-        <!-- Card 2 -->
-        <a href="https://drive.google.com/drive/folders/1nddZhwGOFPJHURm-T9r7EWvRGqESB1Ph" target="_blank">
-          <div class="card p-4 rounded-lg flex items-center justify-between shadow-md hover:shadow-xl">
-            <div class="flex items-center">
-              <img alt="Motorcycle near a house" class="w-14 h-14 rounded-full mr-4" src="nyored9.jpg"/>
-              <span class="text-lg font-semibold text-primary">Nyored 9 Maret | JB Sampora Kuningan</span>
+      <!-- Menu Wrapper with border -->
+      <div class="menu-wrapper">
+        <div class="space-y-4">
+          <!-- Card 1 -->
+          <a href="https://drive.google.com/drive/folders/10-CirvmdPyVFK_k9bFPLmKe1gyjkEwqO" target="_blank">
+            <div class="card p-4 rounded-lg flex items-center justify-between shadow-md hover:shadow-xl">
+              <div class="flex items-center">
+                <img alt="Motorcycle on the road" class="w-14 h-14 rounded-full mr-4" src="logo16nyored.jpg"/>
+                <span class="text-lg font-semibold text-primary">Nyored 16 Maret | JB Sampora Kuningan </span>
+              </div>
+              <i class="fas fa-ellipsis-h text-gray-500"></i>
             </div>
-            <i class="fas fa-ellipsis-h text-gray-500"></i>
-          </div>
-        </a>
+          </a>        
 
-        <!-- Card 3 -->
-        <a href="https://drive.google.com/drive/folders/1lHUxD4b53RRwXPBG9XczqZuhVgTj-VEN" target="_blank">
-          <div class="card p-4 rounded-lg flex items-center justify-between shadow-md hover:shadow-xl">
-            <div class="flex items-center">
-              <img alt="Motorcycle on the road" class="w-14 h-14 rounded-full mr-4" src="IMG_6563.jpg"/>
-              <span class="text-lg font-semibold text-primary">9 Februari 2025 | JB Sampora Kuningan</span>
+          <!-- Card 2 -->
+          <a href="https://drive.google.com/drive/folders/1nddZhwGOFPJHURm-T9r7EWvRGqESB1Ph" target="_blank">
+            <div class="card p-4 rounded-lg flex items-center justify-between shadow-md hover:shadow-xl">
+              <div class="flex items-center">
+                <img alt="Motorcycle near a house" class="w-14 h-14 rounded-full mr-4" src="nyored9.jpg"/>
+                <span class="text-lg font-semibold text-primary">Nyored 9 Maret | JB Sampora Kuningan</span>
+              </div>
+              <i class="fas fa-ellipsis-h text-gray-500"></i>
             </div>
-            <i class="fas fa-ellipsis-h text-gray-500"></i>
-          </div>
-        </a>
+          </a>
 
-        <!-- Card 4 -->
-        <a href="https://drive.google.com/drive/folders/13P3iWCuNXzirK33J72dVojHUHiPMHJQO" target="_blank">
-          <div class="card p-4 rounded-lg flex items-center justify-between shadow-md hover:shadow-xl">
-            <div class="flex items-center">
-              <img alt="Motorcycle on the road" class="w-14 h-14 rounded-full mr-4" src="feb23.jpg"/>
-              <span class="text-lg font-semibold text-primary">16 Januari 2025 | JB Sampora Kuningan</span>
+          <!-- Card 3 -->
+          <a href="https://drive.google.com/drive/folders/1lHUxD4b53RRwXPBG9XczqZuhVgTj-VEN" target="_blank">
+            <div class="card p-4 rounded-lg flex items-center justify-between shadow-md hover:shadow-xl">
+              <div class="flex items-center">
+                <img alt="Motorcycle on the road" class="w-14 h-14 rounded-full mr-4" src="IMG_6563.jpg"/>
+                <span class="text-lg font-semibold text-primary">9 Februari 2025 | JB Sampora Kuningan</span>
+              </div>
+              <i class="fas fa-ellipsis-h text-gray-500"></i>
             </div>
-            <i class="fas fa-ellipsis-h text-gray-500"></i>
-          </div>
-        </a>
+          </a>
 
-        <!-- Card 5 -->
-        <a href="https://drive.google.com/drive/folders/16IH0gH9cWYFBTTBXc-3CBga7SVT7X3dA" target="_blank">
-          <div class="card p-4 rounded-lg flex items-center justify-between shadow-md hover:shadow-xl">
-            <div class="flex items-center">
-              <img alt="Motorcycle on the road" class="w-14 h-14 rounded-full mr-4" src="tikungan.jpg"/>
-              <span class="text-lg font-semibold text-primary">23 Februari 2025 | JB Sampora Kuningan</span>
+          <!-- Card 4 -->
+          <a href="https://drive.google.com/drive/folders/13P3iWCuNXzirK33J72dVojHUHiPMHJQO" target="_blank">
+            <div class="card p-4 rounded-lg flex items-center justify-between shadow-md hover:shadow-xl">
+              <div class="flex items-center">
+                <img alt="Motorcycle on the road" class="w-14 h-14 rounded-full mr-4" src="feb23.jpg"/>
+                <span class="text-lg font-semibold text-primary">16 Januari 2025 | JB Sampora Kuningan</span>
+              </div>
+              <i class="fas fa-ellipsis-h text-gray-500"></i>
             </div>
-            <i class="fas fa-ellipsis-h text-gray-500"></i>
-          </div>
-        </a>
+          </a>
 
+          <!-- Card 5 -->
+          <a href="https://drive.google.com/drive/folders/16IH0gH9cWYFBTTBXc-3CBga7SVT7X3dA" target="_blank">
+            <div class="card p-4 rounded-lg flex items-center justify-between shadow-md hover:shadow-xl">
+              <div class="flex items-center">
+                <img alt="Motorcycle on the road" class="w-14 h-14 rounded-full mr-4" src="tikungan.jpg"/>
+                <span class="text-lg font-semibold text-primary">23 Februari 2025 | JB Sampora Kuningan</span>
+              </div>
+              <i class="fas fa-ellipsis-h text-gray-500"></i>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </body>
